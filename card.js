@@ -1,22 +1,27 @@
 fetch("https://rickandmortyapi.com/api/character")
 .then(Response => Response.json())
 .then(data => {
-    let body = document.querySelector("body")
+    let rowCard = document.querySelector(".rowCard")
     for (let index = 0; index < data.results.length; index++) {
-        let row = document.createElement("div")
-        row.innerHTML = `
+        if(index % 4 === 0) {
+            let newRow = document.createElement("div");
+                        newRow.classList.add("row", "row-cols-1", "row-cols-md-4", "g-4"); // Bootstrap grid classes
+                        rowCard.appendChild(newRow);
+        }
+
+        let cardCol = document.createElement("div")
+        cardCol.classList.add("col"); // Bootstrap column class
+        cardCol.innerHTML = `
         <div class="card" style="width: 18vw;">
                             <img id="cardImg" class="card-img-top" src="${data.results[index].image}" alt="Card image cap">
                             <div class="card-body">
-                            <div class="card-body">
-                            <h5 class="card-title">${data.results[index].name}</h5>
-                            <p class="card-text"></p>   
-  </div>
-                            </div>
+                                <h5 class="card-title">${data.results[index].name}</h5>
+                                <p class="card-text"></p>  
+                            </div> 
         </div>                    
         `
         
-        body.appendChild(row)
+        rowCard.lastChild.appendChild(cardCol)
         
     }
 })

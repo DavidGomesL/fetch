@@ -1,4 +1,19 @@
-Img {
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* Img {
     width: 4vw;
     border-radius: 50%;
-}
+} */
+
+/* .cardRickMorty {
+    display: flex;
+    width: 20vw;
+    border: 10px red;
+    justify-content:space-between;
+    padding-bottom: 15px;
+} */
