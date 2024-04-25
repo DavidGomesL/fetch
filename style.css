@@ -4,6 +4,28 @@
     text-decoration: none;
     box-sizing: border-box;
 }
+/*-----------------------------------------------------------------*/
+.col{
+    display: flex;
+    justify-content: center;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+#containerCard h5{
+    font-size: 18px;
+}
+
+#containerCard span{
+    font-weight:500;
+}
+
+#cardsBody{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 3vh;
+    max-height: 34vh;
+}
 
 /* Img {
     width: 4vw;

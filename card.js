@@ -17,9 +17,12 @@ fetch("https://rickandmortyapi.com/api/character") //Pega a API
         cardCol.innerHTML = `
         <div class="card" style="width: 18vw;">
                             <img id="cardImg" class="card-img-top" src="${data.results[index].image}" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">${data.results[index].name}</h5>
-                                <p class="card-text"></p>  
+                            <div id="cardsBody" class="card-body">
+                                <h5 class="card-title">${data.results[index].id} ${data.results[index].name}</h5>
+                                <p id="descriptionCard" class="card-text"><span>Status: </span>${data.results[index].status}</p>  
+                                <p id="descriptionCard" class="card-text"><span>Species: </span>${data.results[index].species}</p>  
+                                <p id="descriptionCard" class="card-text"><span>Gender: </span>${data.results[index].gender}</p>  
+                                <p id="descriptionCard" class="card-text"><span>Location: </span>${data.results[index].location.name}</p>  
                             </div> 
         </div>                    
         `

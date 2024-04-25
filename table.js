@@ -41,7 +41,6 @@ async function getData() {
                                 <td>${data.results[index].status}</td>
                                 <td>${data.results[index].species}</td>
                                 <td>${data.results[index].gender}</td>
-                                <td>${data.results[index].origin.name}</td>
                                 <td>${data.results[index].location.name}</td>
                             </tr>                  
         `
