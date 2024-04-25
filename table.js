@@ -24,7 +24,9 @@
 // .catch(error => console.log(error))
 
 async function getData() {
-    try {
+    //método try-catch
+    //Utilizado para verificar o processamento do código
+    try { //Vai conter o código que pode haver erro e irá executar o mesmo
         let response = await fetch("https://rickandmortyapi.com/api/character");
         let data = await response.json()
 
@@ -47,8 +49,8 @@ async function getData() {
         tbody.appendChild(row)
         
     }
-    } catch {
-        console.log("Error")
+    } catch { //Irá capturar o error impedindo que ele passe. Assim a execução do código é interrompida.
+        console.log("Error") //Imprime mensagem de erro no console
     } 
 }
 getData()
