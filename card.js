@@ -29,13 +29,3 @@ fetch("https://rickandmortyapi.com/api/character") //Pega a API
     }
 })
 .catch(error => console.log(error)) //Interrompe o codigo caso o mesmo apresente erro e mostra a mensagem presente no console.
-
-/* <tr>
-                                <th scope="row">${data.results[index].id}</th>
-                                <td>${data.results[index].name}</td>
-                                <td>${data.results[index].status}</td>
-                                <td>${data.results[index].species}</td>
-                                <td>${data.results[index].gender}</td>
-                                <td>${data.results[index].origin.name}</td>
-                                <td>${data.results[index].location.name}</td>
-                            </tr> */
